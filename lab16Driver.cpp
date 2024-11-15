@@ -1,8 +1,12 @@
 #include <iostream>
+#include "./lab16.cpp"
 using namespace std;
-int gcf (int a, int b) {
-    if (b == 0) {
-        return a;
-    }
-    return gcf (b, a % b);
+
+int main() {
+    int a, b;
+    cout << "Enter two integer values you want to find the GCF for: ";
+    cin >> a >> b;
+    int result = gcf(a, b);
+    cout << "The greatest common factor of " << a << " and " << b << " is " << result << endl;
+    return 0;
 }
